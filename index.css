@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0f172a;
+  color: #fff;
+}
+
+/* 🔥 MELHORIA IMPORTANTE */
+* {
+  box-sizing: border-box;
+}
+
+header {
+  background: #020617;
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #22c55e;
+}
+
+.container {
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #1e293b;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #22c55e;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.btn {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  background: #22c55e;
+  color: #000;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #16a34a;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #020617;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/* 📱 RESPONSIVO CELULAR */
+@media (max-width: 768px) {
+  header {
+    font-size: 20px;
+    padding: 15px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr; /* 1 coluna no celular */
+  }
+
+  .card {
+    padding: 12px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .price {
+    font-size: 18px;
+  }
+
+  .btn {
+    padding: 14px;
+    font-size: 16px;
+  }
+}
+
+/* 📱 CELULAR PEQUENO */
+@media (max-width: 400px) {
+  header {
+    font-size: 18px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
