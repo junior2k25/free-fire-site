@@ -20,8 +20,13 @@ body {
 .header h1 {
   color: #22c55e;
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
+/* LOGO REDONDA */
 .header img {
   width: 100px;
   height: 100px;
@@ -63,26 +68,37 @@ body {
   transform: translateY(-5px);
 }
 
-.card img {
-  width: 100%;
-  border-radius: 10px;
-}
-
 .card h3 {
   margin: 10px 0;
   color: #22c55e;
 }
 
+/* TEXTO CARD */
+.card p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* STATUS */
+.status {
+  color: red;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+/* VIDEO */
 .video {
   width: 100%;
   border-radius: 10px;
 }
 
+/* PREÇO */
 .price {
   display: block;
   margin: 10px 0;
   font-size: 22px;
   font-weight: bold;
+  color: #00ff88;
 }
 
 /* BOTÕES */
@@ -113,11 +129,6 @@ body {
   padding: 30px;
   background: #020617;
 }
-.feedback {
-  width: 250px;
-  border-radius: 10px;
-  margin: 10px;
-}
 
 /* CTA */
 .cta {
@@ -133,21 +144,53 @@ footer {
   font-size: 14px;
 }
 
-/* WHATS FLOAT */
+/* BOTÃO WHATSAPP */
 .whats {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 15px;
+  right: 15px;
   background: #25D366;
-  padding: 15px;
+  padding: 12px;
   border-radius: 50%;
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse 1.5s infinite;
+}
+
+.whats:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+/* BOTÃO INSTAGRAM */
+.insta {
+  position: fixed;
+  bottom: 75px;
+  right: 15px;
+  background: #E1306C;
+  padding: 12px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.insta:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+/* ANIMAÇÃO WHATS */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
 
 /* RESPONSIVO */
 @media (max-width: 768px) {
+
   .container {
     padding: 15px;
   }
@@ -155,4 +198,22 @@ footer {
   .header h1 {
     font-size: 20px;
   }
+
+  .header img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 12px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
 }
